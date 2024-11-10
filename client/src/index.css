@@ -1,18 +1,16 @@
-.spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0eaff, #f4e1ff); /* Soft Lavender & Blue Gradient */
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.spinner-border {
-  height: 50px;
-  width: 50px;
-}
-
-/*register page*/
-
+/* Glassy Form Container */
 .register-page {
   display: flex;
   align-items: center;
@@ -22,48 +20,104 @@
 
 .register-page form {
   width: 400px;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px); /* Frosted glass blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  transition: transform 0.3s ease;
 }
+
+.register-page form:hover {
+  transform: scale(1.02);
+}
+
+/* Form Title */
+.register-page h1 {
+  text-align: center;
+  color: #3a3a55; /* Cool dark blue for title */
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+/* Input Field Styling with Gradient */
+.register-page input.ant-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid rgba(150, 150, 255, 0.4); /* Soft blue border */
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(224, 234, 255, 0.8), rgba(240, 225, 255, 0.8)); /* Light lavender-blue gradient */
+  color: #3a3a55;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Placeholder Styling */
+.register-page input.ant-input::placeholder {
+  color: rgba(58, 58, 85, 0.7); /* Muted cool blue */
+}
+
+/* Input Focus Effect */
+.register-page input.ant-input:focus {
+  border-color: rgba(142, 192, 250, 0.8);
+  box-shadow: 0 0 0 3px rgba(142, 192, 250, 0.3); /* Light blue shadow */
+  outline: none;
+}
+
+/* Label Styling */
+.register-page .ant-form-item-label label {
+  font-weight: bold;
+  color: rgba(58, 58, 85, 0.8); /* Cool dark blue for labels */
+  font-size: 0.95rem;
+}
+
+/* Button Styling */
+.register-page .btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(142, 192, 250, 0.9), rgba(123, 104, 238, 0.9)); /* Soft blue-violet gradient */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.register-page .btn-primary:hover {
+  background: linear-gradient(135deg, rgba(123, 104, 238, 0.9), rgba(142, 192, 250, 0.9)); /* Gradient reverse */
+  transform: scale(1.02);
+}
+
+.register-page .btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Flex Links Styling */
 .register-page form .d-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .register-page form .d-flex a {
-  color: #007bff;
+  color: rgba(123, 104, 238, 0.9); /* Light purple link color */
   text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.register-page h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.register-page form .d-flex a:hover {
+  color: rgba(142, 192, 250, 0.9); /* Light blue hover color */
+  text-decoration: underline;
 }
 
-.register-page .ant-form-item {
-  margin-bottom: 20px;
-}
-
-.register-page .ant-form-item-label {
-  font-weight: bold;
-}
-
+/* Error Message Styling */
 .register-page .ant-form-item-explain {
-  color: #ff4d4f;
-}
-
-.register-page .ant-form-item-has-error .ant-input {
-  border-color: #ff4d4f;
-}
-
-.register-page .ant-form-item-has-error .ant-input:focus {
-  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
-}
-
-.register-page .btn-primary {
-  width: 100%;
+  color: rgba(229, 115, 115, 0.9); /* Soft red for errors */
+  font-size: 0.9rem;
 }
